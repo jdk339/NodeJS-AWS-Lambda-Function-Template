@@ -1,0 +1,32 @@
+{
+  "name": "my-lambda-function",
+  "version": "1.0.0",
+  "description": "My Lambda Function description",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test",
+    "build": "webpack",
+    "create-function": "webpack && zip -j archive.zip dist/index.js && node setup && node create-lambda-function",
+    "deploy": "webpack && zip -j archive.zip dist/index.js && node deploy-function"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdk339/NodeJS-AWS-Lambda-Function-Template.git"
+  },
+  "keywords": [
+    "helloworld",
+    "lambda",
+    "aws"
+  ],
+  "author": "Joshua Kemmerer",
+  "homepage": "https://github.com/jdk339/NodeJS-AWS-Lambda-Function-Template#readme",
+  "dependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1"
+  },
+  "devDependencies": {
+    "prompt": "^1.0.0",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13"
+  }
+}
